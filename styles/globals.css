@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* html, body, heading */
+@layer base {
+  body {
+    @apply bg-[#141414] text-white !scrollbar-track-transparent !scrollbar-thumb-red-600 !scrollbar-thin !scroll-smooth;
+    /* @apply bg-[#141414] text-white !scrollbar !scrollbar-trck-transparent !scrollbar-thumb-red-600; */
+  }
+
+  header {
+    @apply fixed top-0  z-50 flex items-center justify-between px-4 py-4 lg:py-6 lg:px-10 transition w-full;
+  }
+}
+
+/* custom classname */
+@layer components {
+  .header-link {
+    @apply cursor-pointer text-sm font-light text-[#E5E5E5] transition duration-[0.4s] hover:text-[#b3b3b3];
+  }
+  .banner-button {
+    @apply flex items-center justify-center gap-x-2 rounded px-5  py-1.5  font-semibold transition hover:opacity-75 md:text-xl md:px-8 md:py-2.5 w-[200px];
+  }
+}
